@@ -2,8 +2,8 @@
 
 /*
  * PHP Counter mit Reloadsperre, Textdatenbank und Graphic-Libary (without Error Images)
- * (C)Copyright 2010 - 2019 Daniel Marschall
- * Revision: 2019-02-18
+ * (C)Copyright 2010 - 2022 Daniel Marschall
+ * Revision: 2022-01-09
  */
 
 function pdox_execute($statement, $args=array()) {
@@ -73,6 +73,7 @@ function rgb2hsl($r, $g, $b) {
       if      ($var_R == $var_Max) $h = $del_B - $del_G;
       else if ($var_G == $var_Max) $h = ( 1 / 3 ) + $del_R - $del_B;
       else if ($var_B == $var_Max) $h = ( 2 / 3 ) + $del_G - $del_R;
+      else $h = 0; // should not happen
 
       if ($h < 0) $h++;
       if ($h > 1) $h--;

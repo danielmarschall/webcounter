@@ -11,7 +11,9 @@ parameters:
 		analyseAndScan:
 			- .phpstan.tmp
 	tmpDir: .phpstan.tmp
+	bootstrapFiles:
+		- config/config_dist.inc.php
 	ignoreErrors:
-		- '#is always (true|false)\.#'
-		#- '#Call to function assert\(\) with false will always evaluate to false\.#'
+		#- '#is always (true|false)\.#'
+		- '#Call to function assert\(\) with false will always evaluate to false\.#'
 		#- '#with no typehint specified\.#'

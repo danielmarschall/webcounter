@@ -2,8 +2,8 @@
 
 /*
  * PHP Counter mit Reloadsperre, Textdatenbank und Graphic-Libary (without Error Images)
- * (C)Copyright 2010 - 2017 Daniel Marschall
- * Revision: 2017-05-05
+ * (C)Copyright 2010 - 2022 Daniel Marschall
+ * Revision: 2022-01-09
  */
 
 abstract class VtsCounterTheme {
@@ -22,7 +22,7 @@ abstract class VtsCounterTheme {
 			imagepng($im);
 		} else if (($format == 'jpg') || ($format == 'jpeg')) {
 			header('Content-Type: image/jpeg');
-			imagejpg($im);
+			imagejpeg($im);
 		} else if ($format == 'gif') {
 			header('Content-Type: image/gif');
 			imagegif($im);
